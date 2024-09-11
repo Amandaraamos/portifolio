@@ -1,0 +1,325 @@
+<html><head><base href="https://salesforce-portfolio.example.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Salesforce | Networking & Projetos</title>
+    <style>
+        :root {
+            --sf-blue: #00A1E0;
+            --sf-cloud: #0070D2;
+            --sf-sky: #1798C1;
+            --sf-smoke: #F4F6F9;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Salesforce Sans', Arial, sans-serif;
+            background-color: var(--sf-smoke);
+            color: #333;
+        }
+        header {
+            background-color: var(--sf-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        h1, h2, h3 {
+            position: relative;
+            z-index: 2;
+        }
+        nav {
+            background-color: var(--sf-cloud);
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--sf-sky);
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-grid, .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card, .badge-card {
+            background-color: var(--sf-smoke);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover, .badge-card:hover {
+            transform: translateY(-5px);
+        }
+        .badge-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: var(--sf-cloud);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--sf-sky);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--sf-blue);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg class="header-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="#ffffff" />
+            <path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="#ffffff" stroke-width="2" />
+        </svg>
+        <h1>Portfólio Salesforce</h1>
+        <p>Desenvolvedor Salesforce | Certification Administrator</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#emblemas">Emblemas</a></li>
+            <li><a href="#desafios">Desafios</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="sobre" class="section">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou um desenvolvedor Salesforce apaixonado por criar soluções inovadoras e eficientes. Com experiência em customização de CRM, desenvolvimento de aplicativos Lightning e integrações complexas, estou sempre em busca de novos desafios para expandir minhas habilidades e entregar resultados excepcionais.</p>
+        </section>
+        
+        <section id="projetos" class="section">
+            <h2>Projetos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Lista de Compras</h3>
+                    <p> Gerenciar compras de maneira organizada.</p>
+                    <a href="/projetos/automacao-vendas" class="cta-button">Ver Detalhes</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto Teste </h3>
+                    <p>Projeto Teste </p>
+                    <a href="/projetos/integracao-api" class="cta-button">Ver Detalhes</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto Teste </h3>
+                    <p>Projeto Teste </p>
+                    <a href="/projetos/dashboard" class="cta-button">Ver Detalhes</a>
+                </div>
+            </div>
+            <button id="verMaisProjetos" class="ver-mais-btn">Ver mais...</button>
+        </section>
+        
+        <section id="emblemas" class="section">
+            <h2>Emblemas e Certificações</h2>
+            <div class="badge-grid">
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#00A1E0"/>
+                        <text x="50" y="50" font-size="40" text-anchor="middle" dy=".3em" fill="white">Dev</text>
+                    </svg>
+                    <h3>Prepare for Your Salesforce Administrator Credential</h3>
+                </div>
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#1798C1"/>
+                        <text x="50" y="50" font-size="40" text-anchor="middle" dy=".3em" fill="white">Adm</text>
+                    </svg>
+                    <h3>Prepare for Your Salesforce Certified Associate Credential</h3>
+                </div>
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
+                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
+                    </svg>
+                    <h3>Salesforce Certified App Builder</h3>
+                </div>
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
+                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
+                    </svg>
+                    <h3>Get Started with Data Cloud Quest</h3>
+                </div>
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
+                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
+                    </svg>
+                    <h3>Administer Sales Cloud</h3>
+                </div>
+                <div class="badge-card">
+                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
+                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
+                    </svg>
+                    <h3> Trailhead:Double Star Ranger</h3>
+                </div>
+            </div>
+            <button id="verMaisEmblemas" class="ver-mais-btn">Ver mais...</button>
+        </section>
+        
+        <section id="desafios" class="section">
+            <h2>Desafios Superados</h2>
+            <ul>
+                <li>Superbadge:Lightning Experience Reports & Dashboards Specialist</li>
+                <li>Superbadge:Business Administration Specialist</li>
+                <li>Superbadge:Access Governance Superbadge Unit</li>
+                <li>Superbadge:User Authentication Troubleshooting Superbadge Unit </li>
+                <li>Superbadge:Multi-Factor Authentication and Single Sign-On Settings Superbadge Unit </li>
+                <li>Superbadge:User Authentication Specialist Superbadge</li>
+                <li>Superbadge:Authentication Governance Superbadge Unit</li>
+                <li>Superbadge:User Access Troubleshooting Superbadge Unit</li>
+                <li>Superbadge:Extended User Access and Restriction Superbadge Unit</li>
+                <li>Superbadge:User Access Fundamentals Superbadge Unit </li>
+                <li>Superbadge:User Authentication Settings Superbadge Unit</li>
+                <li>Superbadge:Admin Super Set</li>
+            </ul>
+            <button id="verMaisDesafios" class="ver-mais-btn">Ver mais...</button>
+        </section>
+        
+        <section id="contato" class="section">
+            <h2>Vamos Conectar!</h2>
+            <p>Estou sempre aberto a novas oportunidades de networking e colaboração. Sinta-se à vontade para entrar em contato comigo através dos links abaixo:</p>
+            <div>
+                <a href="www.linkedin.com/in/amanda-ramosr" class="cta-button">LinkedIn</a>
+                <a href="https://www.salesforce.com/trailblazer/amandarr" class="cta-button">Trailhead</a>
+                <a href="amanda.ramos294@gmail.com" class="cta-button">E-mail</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Portfólio Salesforce. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Adicionar animação aos cards de projeto e emblemas
+            const cards = document.querySelectorAll('.project-card, .badge-card');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+ // Ver mais functionality for badges
+            const badgeGrid = document.getElementById('badgeGrid');
+            const verMaisEmblemasBtn = document.getElementById('verMaisEmblemas');
+
+            if (badges.length > 4) {
+                for (let i = 4; i < badges.length; i++) {
+                    badges[i].classList.add('hidden');
+                }
+
+                verMaisEmblemasBtn.addEventListener('click', function() {
+                    badges.forEach(badge => badge.classList.remove('hidden'));
+                    this.style.display = 'none';
+                });
+            } else {
+                verMaisEmblemasBtn.style.display = 'none';
+            }
+
+            // Ver mais functionality for challenges
+            const verMaisDesafiosBtn = document.getElementById('verMaisDesafios');
+
+            if (challengeItems.length > 4) {
+                for (let i = 4; i < challengeItems.length; i++) {
+                    challengeItems[i].classList.add('hidden');
+                }
+
+                verMaisDesafiosBtn.addEventListener('click', function() {
+                    challengeItems.forEach(item => item.classList.remove('hidden'));
+                    this.style.display = 'none';
+                });
+            } else {
+                verMaisDesafiosBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body></html>
