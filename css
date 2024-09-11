@@ -1,0 +1,210 @@
+:root {
+    --sf-blue: #00A1E0;
+    --sf-cloud: #0070D2;
+    --sf-sky: #1798C1;
+    --sf-smoke: #F4F6F9;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    background-color: var(--sf-smoke);
+    color: #333;
+}
+
+header {
+    background-color: var(--sf-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+h1, h2, h3 {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    background-color: var(--sf-cloud);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--sf-sky);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--sf-smoke);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.badge {
+    background-color: var(--sf-cloud);
+    color: white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.badge-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--sf-cloud);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Estilos para dispositivos móveis (telas menores que 768px) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde a navegação no mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: center;
+    }
+
+    /* Exibe o menu ao clicar */
+    nav ul.active {
+        display: block;
+        background-color: var(--sf-cloud);
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        margin-top: 1rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+}
