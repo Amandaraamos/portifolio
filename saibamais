@@ -251,7 +251,7 @@
     
     <footer>
         <p>&copy; 2024 Portfólio Salesforce. Todos os direitos reservados.</p>
-        <a href="portifolio.html" class="cta-button">Voltar ao Portfólio</a>
+        <a href="index.html" class="cta-button">Voltar ao Portfólio</a>
     </footer>
 
     <script>
