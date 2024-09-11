@@ -1,7 +1,7 @@
-<html><head><base href="https://salesforce-portfolio.example.com/">
+<html><head><base href="saibamais.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Salesforce | Networking & Projetos</title>
+    <title>Nome do Projeto | Portfólio Salesforce</title>
     <style>
         :root {
             --sf-blue: #00A1E0;
@@ -72,25 +72,47 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .project-grid, .badge-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .dashboard-preview {
+            width: 100%;
+            height: 500px;
+            border: 2px solid var(--sf-cloud);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
         }
-        .project-card, .badge-card {
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .kpi-card {
             background-color: var(--sf-smoke);
             border-radius: 8px;
             padding: 1rem;
             text-align: center;
             transition: transform 0.3s ease;
         }
-        .project-card:hover, .badge-card:hover {
+        .kpi-card:hover {
             transform: translateY(-5px);
         }
-        .badge-icon {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 1rem;
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--sf-cloud);
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .tech-item {
+            background-color: var(--sf-sky);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
         }
         footer {
             background-color: var(--sf-cloud);
@@ -120,150 +142,121 @@
             <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="#ffffff" />
             <path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="#ffffff" stroke-width="2" />
         </svg>
-        <h1>Portfólio Salesforce</h1>
-        <p>Desenvolvedor Salesforce | Certification Administrator</p>
+        <h1>Nome do Projeto</h1>
+        <p>Função do Projeto</p>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#emblemas">Emblemas</a></li>
-            <li><a href="#desafios">Desafios</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#emblemas">Emblemas</a></li>
+            <li><a href="index.html#desafios">Desafios</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
         </ul>
     </nav>
     
     <main>
-        <section id="sobre" class="section">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Sou um desenvolvedor Salesforce apaixonado por criar soluções inovadoras e eficientes. Com experiência em customização de CRM, desenvolvimento de aplicativos Lightning e integrações complexas, estou sempre em busca de novos desafios para expandir minhas habilidades e entregar resultados excepcionais.</p>
-        </section>
-        
-        <section id="projetos" class="section">
-            <h2>Projetos</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Lista de Compras</h3>
-                    <p> Gerenciar compras de maneira organizada.</p>
-                    <a href="/projetos/automacao-vendas" class="cta-button">Ver Detalhes</a>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto Teste </h3>
-                    <p>Projeto Teste </p>
-                    <a href="/projetos/integracao-api" class="cta-button">Ver Detalhes</a>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto Teste </h3>
-                    <p>Projeto Teste </p>
-                    <a href="/projetos/dashboard" class="cta-button">Ver Detalhes</a>
-                </div>
+        <section class="section">
+            <h2>Visão Geral do Projeto</h2>
+            <p> xxx.</p>
+            
+           <div class="dashboard-preview">
+            <!-- Exibe o vídeo -->
+            <video width="100%" height="100%" controls>
+                <source src="video">
+                Seu navegador não suporta a exibição de vídeos.
+            </video>
+       <!-- Background -->
+                    <rect width="1200" height="500" fill="#f0f3f8"/>
+                </svg>
             </div>
-            <button id="verMaisProjetos" class="ver-mais-btn">Ver mais...</button>
         </section>
         
-        <section id="emblemas" class="section">
-            <h2>Emblemas e Certificações</h2>
-            <div class="badge-grid">
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#00A1E0"/>
-                        <text x="50" y="50" font-size="40" text-anchor="middle" dy=".3em" fill="white">Dev</text>
-                    </svg>
-                    <h3>Prepare for Your Salesforce Administrator Credential</h3>
-                </div>
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#1798C1"/>
-                        <text x="50" y="50" font-size="40" text-anchor="middle" dy=".3em" fill="white">Adm</text>
-                    </svg>
-                    <h3>Prepare for Your Salesforce Certified Associate Credential</h3>
-                </div>
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
-                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
-                    </svg>
-                    <h3>Salesforce Certified App Builder</h3>
-                </div>
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
-                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
-                    </svg>
-                    <h3>Get Started with Data Cloud Quest</h3>
-                </div>
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
-                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
-                    </svg>
-                    <h3>Administer Sales Cloud</h3>
-                </div>
-                <div class="badge-card">
-                    <svg class="badge-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#0070D2"/>
-                        <text x="50" y="50" font-size="30" text-anchor="middle" dy=".3em" fill="white">App</text>
-                    </svg>
-                    <h3> Trailhead:Double Star Ranger</h3>
-                </div>
-            </div>
-            <button id="verMaisEmblemas" class="ver-mais-btn">Ver mais...</button>
-        </section>
-        
-        <section id="desafios" class="section">
-            <h2>Desafios Superados</h2>
+        <section class="section">
+            <h2>Principais Características</h2>
             <ul>
-                <li>Superbadge:Lightning Experience Reports & Dashboards Specialist</li>
-                <li>Superbadge:Business Administration Specialist</li>
-                <li>Superbadge:Access Governance Superbadge Unit</li>
-                <li>Superbadge:User Authentication Troubleshooting Superbadge Unit </li>
-                <li>Superbadge:Multi-Factor Authentication and Single Sign-On Settings Superbadge Unit </li>
-                <li>Superbadge:User Authentication Specialist Superbadge</li>
-                <li>Superbadge:Authentication Governance Superbadge Unit</li>
-                <li>Superbadge:User Access Troubleshooting Superbadge Unit</li>
-                <li>Superbadge:Extended User Access and Restriction Superbadge Unit</li>
-                <li>Superbadge:User Access Fundamentals Superbadge Unit </li>
-                <li>Superbadge:User Authentication Settings Superbadge Unit</li>
-                <li>Superbadge:Admin Super Set</li>
+                <li>xxx.</li>
+                <li>xxx.</li>
+                <li>xxx.</li>
+                <li>xxx.</li>
+                <li>xxx.</li>
             </ul>
-            <button id="verMaisDesafios" class="ver-mais-btn">Ver mais...</button>
         </section>
         
-        <section id="contato" class="section">
-            <h2>Vamos Conectar!</h2>
-            <p>Estou sempre aberto a novas oportunidades de networking e colaboração. Sinta-se à vontade para entrar em contato comigo através dos links abaixo:</p>
-            <div>
-                <a href="www.linkedin.com/in/amanda-ramosr" class="cta-button">LinkedIn</a>
-                <a href="https://www.salesforce.com/trailblazer/amandarr" class="cta-button">Trailhead</a>
-                <a href="amanda.ramos294@gmail.com" class="cta-button">E-mail</a>
+        <section class="section">
+            <h2>Objetos Personalizados</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>xxx</h3>
+                </div>
+                <div class="kpi-card">
+                    <h3>xxx</h3>
+                </div>
+                <div class="kpi-card">
+                    <h3>xxx</h3>
+                </div>
+                <div class="kpi-card">
+                    <h3>xxx</h3>
+                </div>
             </div>
+        </section>
+        
+        <section class="section">
+            <h2>Stack Tecnológico</h2>
+            <div class="tech-stack">
+                <span class="tech-item">Salesforce xxx</span>
+                <span class="tech-item">Salesforce xxx</span>
+                <span class="tech-item">xxx</span>
+                <span class="tech-item">xxx</span>
+                <span class="tech-item">xxx</span>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Desafios e Soluções</h2>
+            <p>Um dos principais desafios foi garantir:</p>
+            <ul>
+                <li>xxx;</li>
+<p>Solução: xxx.</p>
+                <li>xxx;</li>
+<p>Solução: xxx.</p>
+                <li>xxx;</li>
+<p>Solução: xxx.</p>
+                <li>xxx.</li>
+<p>Solução: xxx.</p>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Impacto no Negócio</h2>
+            <p>Após a implementação do Projeto, espera-se que o usuário:</p>
+            <ul>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Futura Melhoria Sistêmicas</h2>
+            <p>Estamos planejando as seguintes melhorias para o dashboard:</p>
+            <ul>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+            </ul>
         </section>
     </main>
     
     <footer>
         <p>&copy; 2024 Portfólio Salesforce. Todos os direitos reservados.</p>
+        <a href="portifolio.html" class="cta-button">Voltar ao Portfólio</a>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('nav a');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Adicionar animação aos cards de projeto e emblemas
-            const cards = document.querySelectorAll('.project-card, .badge-card');
+            const kpiCards = document.querySelectorAll('.kpi-card');
             
             const observerOptions = {
                 root: null,
@@ -281,45 +274,12 @@
                 });
             }, observerOptions);
 
-            cards.forEach(card => {
+            kpiCards.forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 observer.observe(card);
             });
-        });
- // Ver mais functionality for badges
-            const badgeGrid = document.getElementById('badgeGrid');
-            const verMaisEmblemasBtn = document.getElementById('verMaisEmblemas');
-
-            if (badges.length > 4) {
-                for (let i = 4; i < badges.length; i++) {
-                    badges[i].classList.add('hidden');
-                }
-
-                verMaisEmblemasBtn.addEventListener('click', function() {
-                    badges.forEach(badge => badge.classList.remove('hidden'));
-                    this.style.display = 'none';
-                });
-            } else {
-                verMaisEmblemasBtn.style.display = 'none';
-            }
-
-            // Ver mais functionality for challenges
-            const verMaisDesafiosBtn = document.getElementById('verMaisDesafios');
-
-            if (challengeItems.length > 4) {
-                for (let i = 4; i < challengeItems.length; i++) {
-                    challengeItems[i].classList.add('hidden');
-                }
-
-                verMaisDesafiosBtn.addEventListener('click', function() {
-                    challengeItems.forEach(item => item.classList.remove('hidden'));
-                    this.style.display = 'none';
-                });
-            } else {
-                verMaisDesafiosBtn.style.display = 'none';
-            }
         });
     </script>
 </body></html>
